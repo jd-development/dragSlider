@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Plug in - dragSlider</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/dragslider.css" type="text/css" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/dragslider.js"></script>
+</head>
+<body>
+	<div id="outerWrapper">
+		<div id="slider" class="slider">
+			<div>
+				<ul>
+					<li><img src="images/defiledemode/defiledemode1.png" alt="defiledemode1"/></li>
+					<li><img src="images/defiledemode/defiledemode2.png" alt="defiledemode2"/></li>
+					<li><img src="images/defiledemode/defiledemode3.png" alt="defiledemode3"/></li>
+				</ul>
+			</div>
+		</div>
+		<div id="slider2" class="slider">
+			<div>
+				<ul>
+					<li>First screen</li>
+					<li>Second screen</li>
+					<li>Third screen</li>
+					<li>Fourth screen</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	$(function(){
+		$('#slider').dragSlider({
+			numericId:'controlsSlider1',// unique name of the control element
+			width : 450,				// width of the slider
+			height : 250,				// height of the slider
+			dragEffect : true,			// if true enables the drag effect
+			autoCenter : true,			// if true center the slider horizontally
+			imageAutoFit : true,		// if true fit the image to the slider size
+			speed : 200,				// animation's speed
+			useArrow : true,			// if true use arrow to navigate
+		});
+		$('#slider2').dragSlider({
+			numericId:'controlsSlider2',// unique name of the control element
+			width : 900,				// width of the slider
+			height : 400,				// height of the slider
+			dragEffect : true,			// if true enables the drag effect
+			autoCenter : true,			// if true center the slider horizontally
+			imageAutoFit : true,		// if true fit the image to the slider size
+			speed : 200,				// animation's speed
+			useArrow : true,			// if true use arrow to navigate
+		});
+	});
+	</script>
+</body>
+</html>
